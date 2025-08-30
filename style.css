@@ -1,0 +1,297 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0; 
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(./assets/illustration-anime-city.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Centering Doraemon logo */
+.doraemon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 45dvh;
+  padding-bottom: 20px;
+}
+
+.doraemon img {
+  width: 50%;
+  object-fit: contain;
+}
+
+/* Glassmorphism controls */
+.controls {
+  position: fixed;  
+  top: 16%; 
+  right: 16px; 
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 500;
+  z-index: 100;
+  width: auto;
+}
+
+.controls label {
+  flex: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.controls div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.controls input {
+  width: 60px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 6px 10px;
+  color: #000;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.controls input:hover,
+.controls input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #000;
+}
+
+.controls button {
+  border-radius: 8px;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Avatar stack */
+.avatar-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Avatar container */
+.avatar-container {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, z-index 0.3s ease; 
+}
+
+.avatar-container:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/* Ring text around avatar */
+.ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ring-text span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0; /* pivot point at center of avatar */
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+/* Slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input[type="range"]:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* WebKit thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -4px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #0056b3;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #0056b3;
+}
+
+/* IE/Edge */
+input[type="range"]::-ms-track {
+  height: 12px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-ms-thumb:hover {
+  background: #0056b3;
+}
+
+/* Overlay for gradient effects */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,         
+    rgba(0, 0, 0, 0.1) 20%,          
+    rgba(0, 0, 0, 0.2) 70%,         
+    rgba(0, 0, 0, 0.5) 90%,         
+    rgba(0, 0, 0, 1) 100%            
+  );
+}
+
+/* Pulse effect on hover */
+.avatar-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-container:hover {
+  animation: pulse 1s infinite;
+}
+/* Single pulse effect on hover */
+.avatar-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-container:hover {
+  animation: pulse 0.6s forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgb(255, 255, 255);
+  }
+  100% {
+     
+    box-shadow: 0 0 15px rgb(255, 255, 255); /* glow */
+  }
+ 
+}
+/* Base avatar style */
+.avatar-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulse on hover */
+.avatar-container:hover {
+  transform: scale(1.15);              /* grow slightly */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* glow effect */
+}
+
+/* When mouse leaves, transition smoothly back */
+.avatar-container {
+  transform: scale(1);                 /* default scale */
+  box-shadow: 0 0 0 rgba(0, 123, 255, 0); /* default no shadow */
+}
+/* Base avatar style */
+.avatar-container {
+  transform: scale(1);                 /* default scale */
+  box-shadow: 0 0 0 rgba(0, 123, 255, 0); /* default no shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulse effect on hover */
+.avatar-container:hover {
+  transform: scale(1.15);              /* grow slightly */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* glow effect */
+}

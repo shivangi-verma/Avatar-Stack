@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar Stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+ <div id="doreamon" class="doraemon">
+  <img src="./assets/Doraemon.png" alt="">
+ </div>
+    <div class="controls">
+    <div>
+      <label for="items">Items:</label>
+      <input type="range" id="items" min="1" max="8" value="3">
+      <input type="number" id="itemsValue" value="4">
+    </div>
+    <div>
+      <label for="size">Size (px):</label>
+      <input type="range" id="size" min="50" max="200" value="120">
+      <input type="number" id="sizeValue" value="120">
+    </div>
+    <div>
+      <label for="column">Column (px):</label>
+      <input type="range" id="column" min="0" max="50" value="20">
+      <input type="number" id="columnValue" value="20">
+    </div>
+    <div>
+      <label for="border">Border (px):</label>
+      <input type="range" id="border" min="0" max="10" value="2">
+      <input type="number" id="borderValue" value="2">
+    </div>
+   <div>
+  <label for="letterSpacing">Letter Spacing:</label>
+  <input type="range" id="letterSpacing" min="0" max="10" value="2">
+  <input type="number" id="letterSpacingValue" value="2">
+</div>
+    
+  </div>
+
+  <div class="avatar-stack">
+    <!-- Avatars will be dynamically added here -->
+  </div>
+ 
+ 
+  <script src="script.js"></script>
+</body>
+</html>
